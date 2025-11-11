@@ -1,0 +1,50 @@
+:root {
+  /* Cores de profundidade (Base) */
+  /* Gradiente para o fundo da página */
+  --bg-gradient-start: hsl(210, 60%, 95%); /* Azul claro bem suave */
+  --bg-gradient-end: hsl(270, 60%, 95%); /* Roxo claro bem suave */
+
+  --items-color: hsl(
+    0,
+    0%,
+    95%
+  ); /* Fundo do input (similar ao fundo do card, mas ligeiramente diferente) */
+  --action-color: hsl(
+    0,
+    0%,
+    100%
+  ); /* Fundo do card e texto branco (branco puro) */
+
+  /* Cores de Ação */
+  --contrast-color: rgb(38, 217, 193); /* Verde-água vibrante (Botão "Entrar") */
+  --accent-color: rgb(41, 166, 219); /* Azul vibrante (Link "Esqueceu a senha?") */
+
+  /* Cores de Borda e Detalhe */
+  --sub-color: hsl(
+    172,
+    38%,
+    76%
+  ); /* Verde-água mais claro (Borda do input focado) */
+  --default-stroke: hsl(240, 10%, 88%); /* Borda padrão (Input inativo) */
+
+  /* Textos */
+  --text-default: hsl(260, 10%, 25%); /* Cinza escuro/roxo (Título e labels) */
+  --text-mute: hsl(
+    240,
+    5%,
+    50%
+  ); /* Cinza médio (Placeholder, link "Cadastre-se") */
+
+  /* Cores de status (Mantidas, pois não foram especificadas no logo) */
+  --stable-color: hsl(120deg, 29%, 50%);
+  --attention-color: hsl(55deg, 60%, 50%);
+  --alert-color: hsl(0deg, 50%, 50%);
+
+  /* Sombras (Mantidas) */
+  --default-shadow: inset 0px 4px 12px hsla(0deg, 0%, 100%, 0.2),
+    2px 2px 16px hsla(0deg, 0%, 0%, 0.16);
+
+  /* Variáveis do projeto (Mantidas) */
+  --font-family: "Roboto", sans-serif;
+  --border-radius: 8px;
+}
