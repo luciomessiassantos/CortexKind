@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Pacientes</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="shortcut icon" href="/tela paciente/img/cortexicon.svg" type="image/x-icon">
+</head>
+
+<body>
+  <div class="container-app">
+
+    <header class="cabecalho-app">
+      <div class="cabecalho-esquerda"></div>
+      <div class="barra-pesquisa">
+        <span class="material-icons-outlined">search</span>
+        <input type="text" placeholder="Pesquisar">
+      </div>
+    </header>
+
+    <aside class="barra-lateral">
+      <div class="cabecalho-lateral">
+        <div class="grupo-usuario">
+          <div class="circulo-avatar"> <img src="img/usman-yousaf-pTrhfmj2jDA-unsplash.jpg" alt=""></div>
+          <span class="material-icons-outlined seta-baixo">expand_more</span>
+        </div>
+        <a href="/tela de login/login.html" class="material-icons-outlined btn-sair">logout</a>
+      </div>
+
+      <nav class="nav-lateral">
+        <ul>
+          <li>
+            <a href="/tela dashboard/index.html">Dashboard</a>
+          </li>
+          <li>
+            <a href="#" class="ativo">Pacientes</a>
+          </li>
+          <li>
+            <a href="#">Atividades</a>
+          </li>
+          <li>
+            <a href="#">Consultas</a>
+          </li>
+          <li>
+            <a href="#">Calendário de <br> Rotinas</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="conteudo-principal">
+      <div class="grid-visualizacao-pacientes">
+
+        <section class="cartao-lista-pacientes cartao">
+          <div class="cabecalho-cartao-simples">
+            <div class="icone-titulo-cabecalho">
+              <span class="material-icons-outlined">group</span>
+              <h3>Lista de pacientes</h3>
+            </div>
+          </div>
+
+          <div class="lista-rolavel">
+
+            <div class="item-lista">
+              <img src="https://i.pravatar.cc/150?img=68" alt="Paciente" class="avatar-item">
+              <div class="info-item">
+                <strong>João Souza</strong>
+                <span>ID: #4021</span>
+              </div>
+            </div>
+
+            <div class="item-lista">
+              <img src="https://i.pravatar.cc/150?img=44" alt="Paciente" class="avatar-item">
+              <div class="info-item">
+                <strong>Ana Pereira</strong>
+                <span>ID: #3902</span>
+              </div>
+            </div>
+
+            <div class="item-lista">
+              <img src="https://i.pravatar.cc/150?img=5" alt="Paciente" class="avatar-item">
+              <div class="info-item">
+                <strong>Maria Silva</strong>
+                <span>ID: #1024</span>
+              </div>
+            </div>
+
+            <div class="item-lista">
+              <img src="https://i.pravatar.cc/150?img=12" alt="Paciente" class="avatar-item">
+              <div class="info-item">
+                <strong>Carlos Lima</strong>
+                <span>ID: #5501</span>
+              </div>
+            </div>
+
+            <div class="item-lista">
+              <img src="https://i.pravatar.cc/150?img=32" alt="Paciente" class="avatar-item">
+              <div class="info-item">
+                <strong>Fernanda Costa</strong>
+                <span>ID: #2210</span>
+              </div>
+            </div>
+
+            <div class="item-lista">
+              <img src="https://i.pravatar.cc/150?img=59" alt="Paciente" class="avatar-item">
+              <div class="info-item">
+                <strong>Lucas Mendes</strong>
+                <span>ID: #8892</span>
+              </div>
+            </div>
+
+            <div class="item-lista">
+              <img src="https://i.pravatar.cc/150?img=9" alt="Paciente" class="avatar-item">
+              <div class="info-item">
+                <strong>Beatriz Rocha</strong>
+                <span>ID: #1105</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <div class="coluna-meio">
+
+          <section class="cartao-perfil cartao">
+            <div class="cabecalho-perfil">
+              <div class="avatar-grande"> <img src="https://i.pravatar.cc/150?img=5" alt="Paciente"> </div>
+              <div class="textos-perfil">
+
+                <h2>Maria Silva</h2>
+                <span>Autismo leve</span>
+              </div>
+            </div>
+            <div class="historico-perfil">
+              <h4>Histórico</h4>
+              <p>Possui histórico de autismo leve e já fazia uso de medicamentos</p>
+            </div>
+          </section>
+
+          <section class="cartao-consultas cartao">
+            <h3>Consultas recentes</h3>
+            <div class="lista-consultas">
+              <div class="item-consulta">
+                <span>10 de novembro</span>
+                <div class="horario-consulta">
+                  <span>18:45</span>
+                  <span class="material-icons-outlined">expand_more</span>
+                </div>
+              </div>
+              <div class="item-consulta">
+                <span>10 de novembro</span>
+                <div class="horario-consulta">
+                  <span>18:45</span>
+                  <span class="material-icons-outlined">expand_more</span>
+                </div>
+              </div>
+              <div class="item-consulta">
+                <span>10 de novembro</span>
+                <div class="horario-consulta">
+                  <span>18:45</span>
+                  <span class="material-icons-outlined">expand_more</span>
+                </div>
+              </div>
+              <div class="item-consulta">
+                <span>10 de novembro</span>
+                <div class="horario-consulta">
+                  <span>18:45</span>
+                  <span class="material-icons-outlined">expand_more</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <div class="coluna-direita">
+
+          <section class="cartao-notas-rotinas cartao">
+            <div class="cabecalho-dividido">
+              <div class="parte-cabecalho">
+                <h3>Notas</h3>
+                <span class="material-icons-outlined">add</span>
+              </div>
+              <div class="parte-cabecalho">
+                <h3>Rotinas</h3>
+                <span class="material-icons-outlined">add</span>
+              </div>
+            </div>
+            <div class="corpo-vazio"></div>
+          </section>
+
+          <div class="grid-med-atividades">
+
+            <section class="cartao-medicamentos cartao">
+              <div class="cabecalho-cartao-simples">
+                <h3>Medicamentos</h3>
+                <span class="material-icons-outlined btn-abrir-modal" style="cursor: pointer;">add</span>
+              </div>
+              <div class="lista-meds">
+                <div class="item-med">
+                  <div class="info-med">
+                    <strong>Medicamento1</strong>
+                    <span>500g<br>3 dias na semana</span>
+                  </div>
+                  <div class="caixa-status sucesso">
+                    <span class="material-icons-outlined">check</span>
+                  </div>
+                </div>
+                <div class="item-med">
+                  <div class="info-med">
+                    <strong>Medicamento3</strong>
+                    <span>200g<br>1 dia na semana</span>
+                  </div>
+                  <div class="caixa-status erro">
+                    <span class="material-icons-outlined">close</span>
+                  </div>
+                </div>
+                <div class="item-med">
+                  <div class="info-med">
+                    <strong>Medicamento1</strong>
+                    <span>500g<br>3 dias na semana</span>
+                  </div>
+                  <div class="caixa-status sucesso">
+                    <span class="material-icons-outlined">check</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="cartao-atividades-pequeno cartao">
+              <div class="cabecalho-cartao-simples">
+                <h3>Atividades</h3>
+                <span class="material-icons-outlined btn-abrir-modal" style="cursor: pointer;">add</span>
+              </div>
+
+              <div class="acordeon-atividades">
+
+                <div class="item-atividade">
+                  <div class="cabecalho-atividade">
+                    <div>
+                      <strong>Atividade1</strong>
+                      <span>3 dias na semana</span>
+                    </div>
+                    <span class="material-icons-outlined icone-seta">expand_more</span>
+                  </div>
+                  <div class="corpo-atividade">
+                    <p class="rotulo-desc">Descrição</p>
+                    <p>Detalhes da atividade 1...</p>
+                    <span class="material-icons-outlined lixeira">delete</span>
+                  </div>
+                </div>
+
+                <div class="item-atividade">
+                  <div class="cabecalho-atividade">
+                    <div>
+                      <strong>Atividade2</strong>
+                      <span>1 dia na semana</span>
+                    </div>
+                    <span class="material-icons-outlined icone-seta">expand_more</span>
+                  </div>
+                  <div class="corpo-atividade">
+                    <p class="rotulo-desc">Descrição</p>
+                    <p>Atividade essencial para melhorar a locomoção motora que consiste em uma série de movimentos...</p>
+                    <span class="material-icons-outlined lixeira">delete</span>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <div class="sobreposicao-modal" id="modalPaciente">
+    <div class="caixa-modal">
+
+      <div class="cabecalho-modal">
+        <div class="topo-cabecalho">
+          <h3>Dados do paciente</h3>
+          <select class="selecao-paciente">
+            <option>Paciente 1</option>
+            <option>Paciente 2</option>
+          </select>
+        </div>
+
+        <div class="abas-modal">
+          <button class="btn-aba ativo">Consulta</button>
+          <button class="btn-aba">Medicamento</button>
+          <button class="btn-aba">Atividade</button>
+          <button class="btn-aba">Rotina</button>
+          <button class="btn-aba">Notas</button>
+        </div>
+      </div>
+
+      <div class="corpo-modal">
+
+        <div class="coluna-modal col-esquerda">
+          <label>Data</label>
+          <div class="grupo-input-data">
+            <input type="date" value="Hoje">
+            
+          </div>
+
+          <label>Descrição</label>
+          <textarea placeholder="Detalhes da consulta..."></textarea>
+
+          <button class="btn-contorno">Adicionar</button>
+        </div>
+
+        <div class="coluna-modal col-centro">
+          <textarea class="caixa-vazia" placeholder=""></textarea>
+          <button class="btn-primario" id="btnFinalizar">Finalizar</button>
+        </div>
+
+        <div class="coluna-modal col-direita">
+          <div class="item-historico">
+            <div class="conteudo-historico">
+              <strong>10 de novembro</strong>
+              <span>Mudança de prescrição médica</span>
+            </div>
+            <div class="acoes-historico">
+              <span class="material-icons-outlined">edit_note</span>
+              <span class="material-icons-outlined">delete</span>
+            </div>
+          </div>
+
+          <div class="item-historico">
+            <div class="conteudo-historico">
+              <strong>10 de novembro</strong>
+              <span>Mudança de prescrição médica</span>
+            </div>
+            <div class="acoes-historico">
+              <span class="material-icons-outlined">edit_note</span>
+              <span class="material-icons-outlined">delete</span>
+            </div>
+          </div>
+
+          <div class="item-historico">
+            <div class="conteudo-historico">
+              <strong>10 de novembro</strong>
+              <span>Mudança de prescrição médica</span>
+            </div>
+            <div class="acoes-historico">
+              <span class="material-icons-outlined">edit_note</span>
+              <span class="material-icons-outlined">delete</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <script>
+        
+        const headers = document.querySelectorAll('.cabecalho-atividade');
+        headers.forEach(header => {
+          header.addEventListener('click', () => {
+            const item = header.parentElement;
+            item.classList.toggle('aberto');
+          });
+        });
+
+       
+        const modal = document.getElementById('modalPaciente');
+        const openButtons = document.querySelectorAll('.btn-abrir-modal');
+        const closeButton = document.getElementById('btnFinalizar');
+
+        
+        openButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            modal.classList.add('mostrar');
+          });
+        });
+
+        
+        closeButton.addEventListener('click', () => {
+          modal.classList.remove('mostrar');
+        });
+
+        
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.classList.remove('mostrar');
+          }
+        });
+      </script>
+</body>
+
+</html>
