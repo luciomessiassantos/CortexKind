@@ -1,0 +1,523 @@
+@import url(variaveis.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-default);
+  -webkit-font-smoothing: antialiased;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-default);
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+p,
+span,
+a,
+input,
+button,
+div {
+  font-size: 0.95rem;
+}
+
+.container-app {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  grid-template-rows: var(--header-height) 1fr;
+  grid-template-areas:
+    "lateral cabecalho"
+    "lateral principal";
+  height: 100vh;
+}
+
+.cabecalho-app {
+  grid-area: cabecalho;
+}
+
+.barra-lateral {
+  grid-area: lateral;
+}
+.conteudo-principal {
+  grid-area: principal;
+}
+
+.cabecalho-app {
+  background-color: var(--action-color);
+  border-bottom: 1px solid var(--sub-color);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0 24px;
+}
+
+.cabecalho-esquerda {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--text-mute);
+}
+
+.barra-pesquisa {
+  display: flex;
+  align-items: center;
+  background-color: var(--items-color);
+  border-radius: var(--input-radius);
+  padding: 8px 12px;
+  min-width: 300px;
+}
+
+.barra-pesquisa .material-icons-outlined {
+  color: var(--text-mute);
+  margin-right: 8px;
+}
+
+.barra-pesquisa input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  color: var(--text-default);
+}
+
+.barra-lateral {
+  background-color: #f5f5f5;
+  border-right: 1px solid var(--sub-color);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cabecalho-lateral {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.grupo-usuario {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.circulo-avatar {
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.circulo-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cabecalho-lateral .material-icons-outlined {
+  color: var(--text-mute);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.seta {
+  font-size: 1.8rem;
+}
+
+.btn-sair {
+  transform: scaleX(-1);
+}
+
+.nav-lateral {
+  width: 100%;
+}
+
+.nav-lateral ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.nav-lateral li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-lateral a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2c3e50;
+  padding: 12px 0;
+  width: 100%;
+  text-align: center;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.nav-lateral a.ativo {
+  background-color: #589095;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(88, 144, 149, 0.3);
+}
+
+.nav-lateral a:not(.ativo):hover {
+  color: #589095;
+  background-color: transparent;
+}
+
+.nav-lateral a br {
+  display: block;
+}
+
+.nav-lateral a:hover {
+  background-color: var(--sub-color);
+}
+
+.nav-lateral a.ativo {
+  background-color: var(--accent-color);
+  color: var(--action-color);
+  box-shadow: var(--default-shadow);
+}
+
+.conteudo-principal {
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.grid-dashboard {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.visao-geral-pacientes {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 1100px) {
+  .grid-dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .secao-atividades {
+    order: 1;
+  }
+  .cartao-dashboard-combinado {
+    order: 2;
+  }
+
+  .corpo-combinado {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+.cartao {
+  background-color: var(--action-color);
+  border-radius: var(--card-radius);
+  padding: 24px;
+  box-shadow: var(--default-shadow);
+}
+
+.cabecalho-cartao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.visao-geral-pacientes {
+  grid-column: 1 / -1;
+}
+
+.grid-pacientes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.cartao-paciente {
+  background-color: var(--items-color);
+  border: 1px solid var(--sub-color);
+  border-radius: var(--card-radius);
+  padding: 20px;
+}
+
+.cartao-paciente p {
+  color: var(--text-mute);
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+.cartao-paciente p strong {
+  color: var(--text-default);
+}
+
+.cartao-paciente hr {
+  border: none;
+  border-top: 1px solid var(--sub-color);
+  margin: 16px 0;
+}
+
+.cartao-paciente .rodape-cartao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-detalhes {
+  background-color: var(--contrast-color);
+  color: var(--action-color);
+  border: none;
+  padding: 10px 16px;
+  border-radius: var(--input-radius);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.secao-atividades h2 {
+  color: var(--text-mute);
+  font-size: 1rem;
+  margin-bottom: 16px;
+  margin-left: 4px;
+}
+
+.lista-atividades-pilulas {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pilula-atividade {
+  background-color: #e0e0e0;
+  border-radius: 24px;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.conteudo-pilula p {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #000;
+  margin-bottom: 2px;
+}
+
+.conteudo-pilula span {
+  font-size: 0.85rem;
+  color: var(--text-mute);
+}
+
+.meta-pilula {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.meta-pilula span:first-child {
+  font-size: 0.85rem;
+  color: var(--text-mute);
+}
+
+.meta-pilula .material-icons-outlined {
+  color: var(--text-mute);
+  cursor: pointer;
+}
+
+.cartao-dashboard-combinado {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: var(--default-shadow);
+  min-height: 500px;
+}
+
+.cabecalho-combinado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  padding: 0 8px;
+}
+
+.nav-calendario {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.nav-calendario h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+.nav-calendario .material-icons-outlined {
+  cursor: pointer;
+  color: #555;
+}
+
+.filtro-consultas {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-mute);
+  font-weight: 500;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.corpo-combinado {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  width: 100%;
+}
+
+.area-calendario {
+  flex: 1;
+}
+.area-consultas {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.grid-calendario {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+.grid-calendario span {
+  font-size: 0.9rem;
+  padding: 8px 4px;
+}
+.nome-dia {
+  font-weight: 500;
+  color: var(--text-mute);
+}
+.dia.outro-mes {
+  color: var(--text-mute);
+}
+
+.dia.dia-ativo {
+  background-color: var(--contrast-color);
+  color: var(--action-color);
+  border-radius: 50%;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.area-consultas {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cartao-consulta {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.info-consulta h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #000;
+}
+
+.info-consulta span {
+  font-size: 0.85rem;
+  color: var(--text-mute);
+}
+
+.acoes-consulta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.data-consulta {
+  font-size: 0.75rem;
+  color: var(--text-mute);
+}
+
+.btn-excluir {
+  background-color: #c0392b;
+  border: none;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-excluir .material-icons-outlined {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.btn-excluir:hover {
+  background-color: #a93226;
+}
+
+@media (max-width: 1200px) {
+  .grid-dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .lista-atividades-pilulas {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  .pilula-atividade {
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 900px) {
+  .corpo-combinado {
+    grid-template-columns: 1fr;
+  }
+}
